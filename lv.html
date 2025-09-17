@@ -1,1 +1,240 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Made by Nogger</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #121212, #2c2c2c);
+            color: #f0f0f0;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .logo i {
+            font-size: 36px;
+            color: #8a2be2;
+        }
+        
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #8a2be2, #5d9afe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.7;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        
+        .example-buttons {
+            margin-top: 30px;
+            width: 100%;
+        }
+        
+        .example-title {
+            font-size: 18px;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-left: 4px solid #8a2be2;
+            opacity: 0.9;
+        }
+        
+        .example-btn {
+            display: block;
+            width: 100%;
+            padding: 18px 20px;
+            margin-bottom: 15px;
+            background: rgba(30, 30, 30, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 14px;
+            color: #f0f0f0;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .example-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s;
+        }
+        
+        .example-btn:hover {
+            background: rgba(40, 40, 40, 0.9);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+        
+        .example-btn:hover::before {
+            transform: translateX(100%);
+        }
+        
+        .example-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-1 {
+            border-top: 2px solid rgba(138, 43, 226, 0.5);
+        }
+        
+        .btn-2 {
+            border-top: 2px solid rgba(93, 154, 254, 0.5);
+        }
+        
+        .btn-3 {
+            border-top: 2px solid rgba(254, 93, 138, 0.5);
+        }
+        
+        .btn-4 {
+            border-top: 2px solid rgba(93, 254, 138, 0.5);
+        }
+        
+        .btn-5 {
+            border-top: 2px solid rgba(254, 189, 93, 0.5);
+        }
+        
+        /* Animation class for click effect */
+        .btn-click {
+            animation: clickAnimation 0.3s ease;
+        }
+        
+        @keyframes clickAnimation {
+            0% { transform: scale(1); }
+            50% { transform: scale(0.97); }
+            100% { transform: scale(1); }
+        }
+        
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+            padding: 20px 0;
+        }
+        
+        @media (max-width: 400px) {
+            .example-btn {
+                padding: 16px 20px;
+                font-size: 16px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-gem"></i>
+            </div>
+            <h1>Latviešu valoda</h1>
+            <p class="subtitle"></p>
+        </header>
+        
+        <div class="example-buttons">
+            <h2 class="example-title">Options</h2>
+            <a href="lv" class="example-btn btn-1">1.p.d.</a>
+            <a href="eng" class="example-btn btn-2">2.p.d.</a>
+            <a href="#" class="example-btn btn-3">3.p.d.</a>
+            <a href="#" class="example-btn btn-4">4.p.d.</a>
+            <a href="#" class="example-btn btn-5">5.p.d.</a>
+        </div>
+        
+        <footer>
+            <p></p>
+        </footer>
+    </div>
+
+    <script>
+        // Fixed button interaction - removed e.preventDefault()
+        document.querySelectorAll('.example-btn').forEach(button => {
+            // Mouse events
+            button.addEventListener('mousedown', function() {
+                this.classList.add('btn-click');
+            });
+            
+            button.addEventListener('mouseup', function() {
+                this.classList.remove('btn-click');
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                this.classList.remove('btn-click');
+            });
+            
+            // Touch events
+            button.addEventListener('touchstart', function() {
+                this.classList.add('btn-click');
+            }, {passive: true});
+            
+            button.addEventListener('touchend', function() {
+                this.classList.remove('btn-click');
+            });
+            
+            // Remove animation class after animation completes
+            button.addEventListener('animationend', function() {
+                this.classList.remove('btn-click');
+            });
+        });
+    </script>
+</body>
+</html>
